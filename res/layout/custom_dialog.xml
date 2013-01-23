@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/customDialogRoot"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:gravity="center"
+              android:padding="10px">
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/customDialogImage"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="10px"
+              android:gravity="center_vertical">
+    <ImageView android:id="@+id/image"
+               android:layout_width="75dp"
+               android:layout_height="75dp"
+               android:layout_margin="5dp"
+               android:layout_gravity="left"
+               android:contentDescription="@string/contdescUserImagePopUp"/>
+    </RelativeLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/customDialogText"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:padding="10px"
+              android:layout_alignBottom="@+id/customDialogImage"
+        	  android:layout_alignParentRight="true"
+        	  android:layout_toRightOf="@+id/customDialogImage" 
+        	  android:gravity="center_vertical">
+    <TextView android:id="@+id/customDialogUsernameLabel"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"  
+              android:textColor="#ffffff"
+              android:textAppearance="?android:attr/textAppearanceLarge"/>
+    <TextView android:id="@+id/customDialogTracks"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"  
+              android:layout_below="@+id/customDialogUsernameLabel"
+              android:textColor="#ffffff"
+              android:text="@string/cronologyTracksUserPopUp"/>
+</RelativeLayout>
+</RelativeLayout>

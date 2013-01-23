@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF8800"
+    tools:context=".MainActivity" >
+  
+     <LinearLayout
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:padding="10dip"
+          >
+          <!--  Email Label -->
+          <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:text="@string/username"/>
+          <EditText 
+                android:inputType="text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:layout_marginBottom="20dip"
+                android:singleLine="true"/>
+          <!--  Password Label -->
+          <TextView android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:text="@string/password"/>
+          <EditText 
+                android:inputType="textPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:singleLine="true"
+                />
+          <!-- Login button -->
+          <Button android:id="@+id/button_Login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="@string/login"/>
+          <!-- Link to Forgot Password -->
+          <TextView android:id="@+id/link_to_register"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dip"
+                android:layout_marginBottom="40dip"
+                android:text="@string/forgot_password"
+                android:gravity="center"
+                android:textSize="10sp"
+                android:textColor="#ffffff"/>
+ 
+     </LinearLayout>
+  
+</RelativeLayout>

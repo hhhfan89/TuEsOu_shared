@@ -1,0 +1,58 @@
+<resources>
+
+    <string name="app_name">TuEsOu</string>
+    <string name="hello_world">Hello world!</string>
+
+    <!-- ActionBar Strings -->
+    <string name="menu_settings">Settings</string>
+    <string name="menu_userprofile_visibility">Visibilità</string>
+    <string name="menu_userprofile_help">Help</string>
+    <string name="menu_userprofile_logout">Logout</string>
+    <string name="title_activity_main">TuEsOu</string>
+    <string name="actionbar_starttracking">Start Tracking</string>
+    <string name="actionbar_friends">Amici</string>
+    <string name="actionbar_stoptracking">Stop Tracking</string>
+    <string name="actionbar_notification">Notifiche</string>
+    <string name="actionbar_track">Gestione Tracciati</string>
+    <string name="actionbar_search">Ricerca</string>
+
+    <!-- LoginLayout Strings -->
+    <string name="image_logo">Image_Logo</string>
+    <string name="login">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Recupera Password</string>
+
+    <!-- UserProfile Strings -->
+    <string name="imageUserProfileContentDescription">Immagine Personale</string>
+    <string name="imageContentEditPersonalMessage">Modifica messaggio personale</string>
+    <string name="textViewLabelProfiloUtente">Profilo Utente</string>
+	<string name="textViewLabelUsername">USERNAME</string>
+	<string name="textViewLabelName">NOME</string>
+	<string name="textViewLabelSurname">COGNOME</string>
+	<string name="textViewLabelEmail">EMAIL</string>
+	<string name="textViewLabelPersonalMessage">MESSAGGIO PERSONALE</string>
+	<string name="insertPersonalMessage">Inserisci messaggio personale</string>
+	
+	<!-- Track Strings -->
+    <string name="imageDeleteTrack">Cancella tracciato</string>
+    <string name="contdescUserImagePopUp">Immagine personale utente</string>
+    <string name="cronologyTracksUserPopUp">Cronologia tracciati</string>
+
+    <!-- Search Strings -->
+    <string name="search_hint">Cerca utente</string>
+    <string name="title_activity_search">SearchActivity</string>
+    
+    <!-- Filter Strings -->
+   	<string name="position">Imposta la posizione: </string>
+   	<string name="actual_position">Posizione attuale</string>
+   	<string name="range">Imposta il raggio d\'azione</string>
+   	<string name="visibility_friends">Visibilità amici: </string>
+   	<string name="only_connect_friends">Solo amici connessi </string>
+   	<string name="save">Salva</string>
+   	
+   	<!-- Map Strings -->
+   	<string name="satellite">Satellite</string>
+   	<string name="traffic">Traffico</string>
+
+</resources>

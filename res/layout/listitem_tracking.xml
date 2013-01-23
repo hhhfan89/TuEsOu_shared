@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dip"
+    android:padding="5dip" >
+
+    <RelativeLayout
+        android:id="@+id/listitemTracking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/trackName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/dateTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trackName"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/departureTimeTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dateTrack"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/arrivalTimeTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/departureTimeTrack"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000" >
+        </TextView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignBottom="@+id/listitemTracking"
+        android:layout_alignParentRight="true" 
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:id="@+id/buttonDeleteTrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:contentDescription="@string/imageDeleteTrack"
+            android:src="@drawable/delete"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

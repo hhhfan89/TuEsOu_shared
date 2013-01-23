@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dip"
+    android:padding="5dip" >
+
+        <TextView
+            android:id="@+id/usernameTrackFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
+          
+            
+        <TextView
+            android:id="@+id/trackNameFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_below="@+id/usernameTrackFriends"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/dateTrackFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trackNameFriends"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/departureTimeTrackFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dateTrackFriends"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/arrivalTimeTrackFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/departureTimeTrackFriends"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#000000" >   
+            
+        </TextView>
+</RelativeLayout>
