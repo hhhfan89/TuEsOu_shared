@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:padding="5dip">
+        
+    <RelativeLayout
+       			android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+       <ImageView
+                android:id="@+id/personImage"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:contentDescription="Immagine personale">
+        </ImageView>
+        <TextView
+                android:text="Nome"
+                android:layout_marginLeft="5dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:id="@+id/personName"
+        		android:layout_toRightOf="@id/personImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                ></TextView>
+        <TextView
+                android:text="Cognome"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#33B5E5"
+                android:id="@+id/personSurname"
+                android:layout_alignLeft="@+id/personName"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+        </TextView>
+        </RelativeLayout>
+        <RelativeLayout 
+            	android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_marginLeft="180dp">
+        <ImageButton 
+                android:id="@+id/buttonAcceptFriends"
+            	android:layout_toRightOf="@+id/personSurname"
+            	android:layout_marginRight="2dp"
+            	android:layout_marginLeft="1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+               	android:src="@drawable/accept"
+                />
+         <ImageButton 
+                android:id="@+id/buttonDeleteFriends"
+            	android:layout_toRightOf="@+id/buttonDeleteFriends"
+            	android:layout_marginRight="2dp"
+            	android:layout_marginLeft="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+               	android:src="@drawable/delete"
+                />
+        </RelativeLayout>
+       
+</RelativeLayout>
