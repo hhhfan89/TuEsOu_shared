@@ -12,7 +12,16 @@ public class User {
 	private String password;
 	private String email;
 	private String telephone;
+	private String key;
 	
+	public String getKey() {
+		return key;
+	}
+
+	public void setKey(String key) {
+		this.key = key;
+	}
+
 	public User() {
 
 	}
@@ -62,7 +71,7 @@ public class User {
 	public void setUsername(String username) {
 		 
 		//Check the length of the username
-		if(username.length()<= 4 && username.length()>=12) {
+		/*if(username.length()<= 4 && username.length()>=12) {
 			throw new IllegalArgumentException("The username must be >4 and <12");
 		}
 		
@@ -71,7 +80,7 @@ public class User {
 		Matcher m1 = p1.matcher(username);
 		if (!m1.find()) {
 			throw new IllegalArgumentException("The username must be in a correct format");
-		}		
+		}	*/	
 		
 		this.username = username;
 	}

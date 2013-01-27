@@ -1,4 +1,4 @@
-package it.vitux.tuesou.test;
+/*package it.vitux.tuesou.test;
 
 import static org.junit.Assert.*;
 import it.vitux.tuesou.User;
@@ -11,14 +11,18 @@ public class UserTest {
 	@Before
 	public void setUp() throws Exception {
 		//User user = new User();
-	}
+	}*/
+
+
 	
-/*
+	/*	questo era gia commentato, il resto no!
 	@Test
 	public void testSetId() {
 		fail("Not yet implemented"); // TODO
 	}*/
 
+
+/*
 	@Test  (expected=IllegalArgumentException.class)
 	public void testSetUsername() {
 		User user = new User();
@@ -46,9 +50,9 @@ public class UserTest {
 		User user = new User();
 		user.setPassword("");
 		assertEquals("", user.getPassword());
-	}
+	}*/
 
-	/*
+	/* questo era gia commentato, il resto no!
 	@Test
 	public void testSetEmail() {
 		fail("Not yet implemented"); // TODO
@@ -59,4 +63,4 @@ public class UserTest {
 		fail("Not yet implemented"); // TODO
 	}*/
 
-}
+//}

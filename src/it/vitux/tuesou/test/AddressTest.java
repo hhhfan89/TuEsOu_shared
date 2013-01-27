@@ -1,4 +1,4 @@
-package it.vitux.tuesou.test;
+/*package it.vitux.tuesou.test;
 
 import static org.junit.Assert.*;
 
@@ -32,3 +32,4 @@ public class AddressTest {
 	}
 
 }
+*/

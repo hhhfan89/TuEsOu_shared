@@ -1,4 +1,4 @@
-package it.vitux.tuesou.test;
+/*package it.vitux.tuesou.test;
 
 import static org.junit.Assert.*;
 import it.vitux.tuesou.Image;
@@ -10,14 +10,16 @@ public class ImageTest {
 
 	@Before
 	public void setUp() throws Exception {
-	}
-/*
+	}*/
+
+	
+	/* questo era gia commentato, il resto no!
 	@Test
 	public void testSetId() {
 		fail("Not yet implemented"); // TODO
 	}*/
 
-	@Test  (expected=IllegalArgumentException.class)
+/*	@Test  (expected=IllegalArgumentException.class)
 	public void testSetAddress() {
 
 		Image image = new Image();
@@ -25,4 +27,4 @@ public class ImageTest {
 		assertEquals("stringafoto.png", image.getAddress());
 	}
 
-}
+}*/
