@@ -1,5 +1,6 @@
 package it.vitux.tuesou;
 
+import it.vitux.tuesou.entity.User;
 import android.content.Context;
 import android.util.Log;
 

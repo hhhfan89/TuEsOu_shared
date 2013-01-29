@@ -1,15 +1,14 @@
-package it.vitux.tuesou;
+package it.vitux.tuesou.entity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Address {
-	//Sono il più bravo!!
+	
 	private String address;
 	private String city;
 	private String state;
 	private String zipCode;
-	//prova gitHub 23:02
 	
 	public Address() {
 	

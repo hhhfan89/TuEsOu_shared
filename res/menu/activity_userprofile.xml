@@ -31,6 +31,12 @@
           android:orderInCategory="4"
           android:showAsAction="always"/>
 	
+	<item android:id="@+id/actionbar_stoptracking"
+          android:icon="@drawable/av_play"
+          android:title="@string/actionbar_stoptracking"
+          android:orderInCategory="4"
+          android:showAsAction="always"/>
+	
 	<item android:id="@+id/actionbar_notification"
           android:icon="@drawable/content_event"
           android:title="@string/actionbar_notification"

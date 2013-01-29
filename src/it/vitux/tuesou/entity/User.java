@@ -1,4 +1,4 @@
-package it.vitux.tuesou;
+package it.vitux.tuesou.entity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -14,14 +14,12 @@ public class User {
 	private String telephone;
 	private String key;
 	
-	public String getKey() {
-		return key;
-	}
-
-	public void setKey(String key) {
-		this.key = key;
-	}
-
+	//attributi derivati da associazioni
+	private Address address;
+	private Image image;
+	private Message message;
+	
+	
 	public User() {
 
 	}
@@ -35,13 +33,18 @@ public class User {
 	 * @param telephone
 	 */
 	public User(int id, String username, String name, String surname,
-			String password, String email, String telephone) {
+			String password, String email, String telephone, String key, 
+			Address address, Image image, Message message) {
 		this.id = id;
 		this.username = username;
 		this.name = name;
 		this.surname = surname;
 		this.password = password;
 		this.email = email;
+		this.key = key;
+		this.address = address;
+		this.image = image;
+		this.message = message;
 	}
 
 	/**
@@ -206,6 +209,38 @@ public class User {
 		}	
 		
 		this.telephone = telephone;
+	}
+
+	public String getKey() {
+		return key;
+	}
+
+	public void setKey(String key) {
+		this.key = key;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	public Image getImage() {
+		return image;
+	}
+
+	public void setImage(Image image) {
+		this.image = image;
+	}
+
+	public Message getMessage() {
+		return message;
+	}
+
+	public void setMessage(Message message) {
+		this.message = message;
 	}
 	
 }

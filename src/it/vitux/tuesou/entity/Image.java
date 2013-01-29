@@ -1,4 +1,4 @@
-package it.vitux.tuesou;
+package it.vitux.tuesou.entity;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

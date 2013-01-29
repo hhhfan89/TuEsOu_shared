@@ -24,6 +24,7 @@ import java.util.List;
 import java.util.Random;
 
 import it.vitux.tuesou.R;
+import it.vitux.tuesou.entity.User;
 
 import android.widget.SimpleAdapter;
 
@@ -41,12 +42,7 @@ public class MainActivity extends SherlockActivity {
         
         //vuol dire che ha trovato un utente, cioè l'ultimo loggato!
         if(user!=null){
-        	//per semplicità ho fatto che entra direttamente nel profilo utente
-        	setContentView(R.layout.layout_userprofile);
-        	TextView username = (TextView) findViewById(R.id.textViewUsernameLabel);
-        	username.setText(user.getUsername());
-        	
-        	/*setContentView(R.layout.layout_login);
+        	setContentView(R.layout.layout_login);
         	setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
      
         	//Se l'utente già esiste
@@ -54,16 +50,13 @@ public class MainActivity extends SherlockActivity {
         		EditText editTextUsername = (EditText) findViewById(R.id.username_login);
         		editTextUsername.setText(user.getUsername());
         	}
-        	else {
-        		Toast.makeText(MainActivity.this,"Non esiste", Toast.LENGTH_LONG).show();
-        	}*/
         }
         //non ha trovato nessun utente nel db (prima volta che usa il programma)
         else{
         	setContentView(R.layout.layout_login);
-        
         	
-    	final EditText txtUserName = (EditText)findViewById(R.id.username_login);
+        	
+    	/*final EditText txtUserName = (EditText)findViewById(R.id.username_login);
 		final EditText txtPassword = (EditText)findViewById(R.id.password_login);
 		Button btnLogin = (Button)findViewById(R.id.button_Login);
 		
@@ -87,8 +80,8 @@ public class MainActivity extends SherlockActivity {
 				}
 			}
 			
-		});
-	}
+		});*/
+        }
     }
 
 
