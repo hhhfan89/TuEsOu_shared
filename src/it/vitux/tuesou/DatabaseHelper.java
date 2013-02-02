@@ -17,7 +17,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private Context mCxt;
     
-    public DatabaseHelper(Context ctx) {
+    private DatabaseHelper(Context ctx) {
         super(ctx, DATABASE_NAME, null, DATABASE_VERSION);
         this.mCxt = ctx;
     }
@@ -35,14 +35,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
         return mInstance;
     }
-
-    /**
-     * constructor should be private to prevent direct instantiation.
-     * make call to static factory method "getInstance()" instead.
-     * 
-     */
-
-
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {

@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".MainActivity" >
+
+     <LinearLayout
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:padding="10dip"
+          >
+<Button android:id="@+id/showMapButton" android:layout_width="fill_parent"
+    android:layout_height="wrap_content" android:text="Show Map"
+    android:layout_marginLeft="30dp" android:layout_marginRight="30dp"
+    android:layout_marginTop="30dp"
+    android:layout_alignParentTop="true">
+</Button>
+
+
+<FrameLayout android:id="@+id/allFragmentsFrameLayout"  android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:layout_alignParentTop="true">
+  <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:map="http://schemas.android.com/apk/res-auto"
+android:id="@+id/map"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+class="com.google.android.gms.maps.SupportMapFragment"
+map:uiCompass="true"
+map:mapType= "normal"
+map:uiRotateGestures="true"
+map:uiScrollGestures="true"
+map:uiTiltGestures="true"
+map:uiZoomControls="true"
+map:uiZoomGestures="true"/>
+</FrameLayout>
+</LinearLayout>
+</RelativeLayout>

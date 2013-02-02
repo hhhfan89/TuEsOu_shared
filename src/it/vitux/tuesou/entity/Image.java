@@ -5,24 +5,14 @@ import java.util.regex.Pattern;
 
 public class Image {
 	
-	private int id;
 	private String address;
 	
 	public Image(){
 		
 	}
 	
-	public Image(int id, String address){
+	public Image(String address){
 		this.address = address;
-		this.id = id;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getAddress() {

@@ -1,39 +1,24 @@
 package it.vitux.tuesou.entity;
 
-import java.io.Serializable;
-import java.util.HashSet;
-
-public class Coordinate implements Serializable{
+public class Coordinate{
 	
-	private int id;
-	private float latitude;
-	private float longitude;
-	private Track track;
+	private double latitude;
+	private double longitude;
 	
 	public Coordinate(){
 		
 	}
 	
-	public Coordinate(int id, float latitude, float longitude, Track track){
-		this.id = id;
+	public Coordinate(float latitude, float longitude){
 		this.latitude = latitude;
 		this.longitude = longitude;
-		this.track = track;
 	}
 	
-	public int getId() {
-		return id;
-	}
-	
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public float getLatitude() {
+	public double getLatitude() {
 		return latitude;
 	}
 
-	public void setLatitude(float latitude) {
+	public void setLatitude(double latitude) {
 		
 		if(latitude<=0){
 			throw new IllegalArgumentException("Latitude <= 0");
@@ -41,11 +26,11 @@ public class Coordinate implements Serializable{
 		this.latitude = latitude;
 	}
 
-	public float getLongitude() {
+	public double getLongitude() {
 		return longitude;
 	}
 
-	public void setLongitude(float longitude) {
+	public void setLongitude(double longitude) {
 		
 		if(longitude<=0){
 			throw new IllegalArgumentException("Longitude <= 0");
@@ -53,13 +38,6 @@ public class Coordinate implements Serializable{
 		this.longitude = longitude;
 	}
 
-	public Track getTrack() {
-		return track;
-	}
-
-	public void setTrack(Track track) {
-		this.track = track;
-	}
 
 	
 }
