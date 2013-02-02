@@ -1,11 +1,7 @@
 package it.vitux.tuesou.entity;
 
-import java.io.Serializable;
-import java.util.HashSet;
-
-public class Coordinate implements Serializable{
+public class Coordinate{
 	
-	private int id;
 	private float latitude;
 	private float longitude;
 	private Track track;
@@ -14,21 +10,12 @@ public class Coordinate implements Serializable{
 		
 	}
 	
-	public Coordinate(int id, float latitude, float longitude, Track track){
-		this.id = id;
+	public Coordinate(float latitude, float longitude, Track track){
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.track = track;
 	}
 	
-	public int getId() {
-		return id;
-	}
-	
-	public void setId(int id) {
-		this.id = id;
-	}
-
 	public float getLatitude() {
 		return latitude;
 	}

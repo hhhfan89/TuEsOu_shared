@@ -1,35 +1,23 @@
 package it.vitux.tuesou.entity;
 
-import java.io.Serializable;
 import java.sql.Date;
 import java.sql.Time;
 
-public class Track implements Serializable{
+public class Track{
 	
-	private int id;
 	private String name;
 	private Date date;
 	private Time startTime;
 	private Time finishTime;
 	
 	public Track(){
-		
 	}
 	
-	public Track(int id, String name, Date date, Time startTime, Time finishTime){
-		this.id = id;
+	public Track(String name, Date date, Time startTime, Time finishTime){
 		this.name = name;
 		this.date = date;
 		this.startTime = startTime;
 		this.finishTime = finishTime;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getName() {
@@ -84,5 +72,7 @@ public class Track implements Serializable{
 		
 		this.finishTime = finishTime;
 	}
+	
+	
 	
 }

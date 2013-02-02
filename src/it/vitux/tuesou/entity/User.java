@@ -5,7 +5,6 @@ import java.util.regex.Pattern;
 
 public class User {
 
-	private int id;
 	private String username;
 	private String name;
 	private String surname;
@@ -32,10 +31,9 @@ public class User {
 	 * @param password
 	 * @param telephone
 	 */
-	public User(int id, String username, String name, String surname,
+	public User(String username, String name, String surname,
 			String password, String email, String telephone, String key, 
 			Address address, Image image, Message message) {
-		this.id = id;
 		this.username = username;
 		this.name = name;
 		this.surname = surname;
@@ -45,20 +43,6 @@ public class User {
 		this.address = address;
 		this.image = image;
 		this.message = message;
-	}
-
-	/**
-	 * @return the id
-	 */
-	public int getId() {
-		return id;
-	}
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	/**
