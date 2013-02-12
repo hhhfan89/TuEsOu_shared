@@ -45,24 +45,39 @@ public class TrackingActivity extends SherlockFragmentActivity {
 	private GeoPoint currentPosition;
 	private MapView mapView = null;
 	private Button btnShowLocation;
+	
+	private MapPageFragment mapFragment;
+	private FragmentManager fManager;
 	BroadcastReceiver mMessageReceiver;
+	
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.layout_login);
+		setContentView(R.layout.layout_tracking);
 		
 		
-	
-		btnShowLocation = (Button) findViewById(R.id.button_Login);
+		
+		btnShowLocation = (Button) findViewById(R.id.showMapButton);
+		
+		fManager = getSupportFragmentManager();
+		mapFragment = new MapPageFragment(fManager);
+		mapFragment.setMap(R.id.map);
+		
+		Log.i("a", "primaGPS");
+		
+		
 		gps = new GPSTracker(TrackingActivity.this);
-
+		
+		
+		Log.i("a", "dopoGPS");
 		mMessageReceiver = new BroadcastReceiver() {
 
 
 			@Override
 			public void onReceive(Context context, Intent intent) {
 				// Get extra data included in the Intent
+				Log.i("a", "dentro onReceive");
 				String message = intent.getStringExtra("new_coordinates");
 				Log.d("receiver", "Got message: " + message);
 				// check if GPS enabled

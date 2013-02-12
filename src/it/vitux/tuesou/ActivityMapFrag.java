@@ -33,7 +33,8 @@ public class ActivityMapFrag extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		//setContentView(R.layout.activity_main);
+		
 		fManager = getSupportFragmentManager();
 		mapFragment = new MapPageFragment(fManager);
 	
@@ -48,7 +49,7 @@ public class ActivityMapFrag extends FragmentActivity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.layout.activity_main, menu);
+	//	getMenuInflater().inflate(R.layout.activity_main, menu);
 		return true;
 	}
 }

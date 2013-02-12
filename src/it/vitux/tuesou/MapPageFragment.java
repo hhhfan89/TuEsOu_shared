@@ -102,6 +102,7 @@ public class MapPageFragment extends SupportMapFragment {
 
 	public void setMap(int map) {
 
+		//Log.i("a", ""+map + "..." + fm.toString());
 		Fragment fragment1 = fm.findFragmentById(map);
 		SupportMapFragment mapFragment = (SupportMapFragment) fragment1;
 		mMap = mapFragment.getMap();
