@@ -1,10 +1,12 @@
 package it.vitux.tuesou.entity;
 
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class User {
 
+	private int id;
 	private String username;
 	private String name;
 	private String surname;
@@ -12,6 +14,8 @@ public class User {
 	private String email;
 	private String telephone;
 	private String key;
+	private boolean isConnected;
+	private List<Track> trackList;
 	
 	//attributi derivati da associazioni
 	private Address address;
@@ -45,6 +49,14 @@ public class User {
 		this.message = message;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	/**
 	 * @return the username
 	 */
@@ -58,7 +70,7 @@ public class User {
 	public void setUsername(String username) {
 		 
 		//Check the length of the username
-		/*if(username.length()<= 4 && username.length()>=12) {
+		if(username.length()<= 4  || username.length()>=12) {
 			throw new IllegalArgumentException("The username must be >4 and <12");
 		}
 		
@@ -67,7 +79,7 @@ public class User {
 		Matcher m1 = p1.matcher(username);
 		if (!m1.find()) {
 			throw new IllegalArgumentException("The username must be in a correct format");
-		}	*/	
+		}		
 		
 		this.username = username;
 	}
@@ -85,7 +97,7 @@ public class User {
 	public void setName(String name) {
 		
 		//Check the length of the name
-		if(name.length()<=3 && name.length()>=15) {
+		if(name.length()<=3 || name.length()>=15) {
 			throw new IllegalArgumentException("The name must be >3 and <15");
 		}
 		
@@ -112,7 +124,7 @@ public class User {
 	public void setSurname(String surname) {
 		
 		//Check the length of the surname
-		if(surname.length()<=3 && surname.length()>=15) {
+		if(surname.length()<=3 || surname.length()>=15) {
 			throw new IllegalArgumentException("The surname must be >3 and <15");
 		}
 		
@@ -139,7 +151,7 @@ public class User {
 	public void setPassword(String password) {
 		
 		//Check the password's length
-		if(password.length()<= 6 && password.length()>=15) {
+		if(password.length()<= 6 || password.length()>=15) {
 			throw new IllegalArgumentException("The password must be >6 and <15");
 		}
 		
@@ -159,7 +171,7 @@ public class User {
 	public void setEmail(String email) {
 		
 		//Check if the email is valid trough a simple regular expression
-		Pattern p1 = Pattern.compile("[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,4}");
+		Pattern p1 = Pattern.compile("[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,3}");
 		Matcher m1 = p1.matcher(email);
 		if (!m1.find()) {
 			throw new IllegalArgumentException("The email must be in a correct format");
@@ -181,8 +193,8 @@ public class User {
 	public void setTelephone(String telephone) {
 		
 		//Check the length of the telephone
-		if(telephone.length()>=6 && telephone.length()<=15) {
-			throw new IllegalArgumentException("The surname must be >2 and <16");
+		if(telephone.length()<=6 || telephone.length()>=15) {
+			throw new IllegalArgumentException("The telephone must be >6 and <15");
 		}
 		
 		//Check if the telephone contains only characters
@@ -225,6 +237,23 @@ public class User {
 
 	public void setMessage(Message message) {
 		this.message = message;
+	}
+
+
+	public boolean isConnected() {
+		return isConnected;
+	}
+
+	public void setConnected(boolean isConnected) {
+		this.isConnected = isConnected;
+	}
+
+	public List<Track> getTrackList() {
+		return trackList;
+	}
+
+	public void setTrackList(List<Track> trackList) {
+		this.trackList = trackList;
 	}
 	
 }

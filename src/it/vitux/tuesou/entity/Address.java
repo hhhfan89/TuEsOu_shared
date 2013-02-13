@@ -4,13 +4,21 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Address {
+
+	//
+	private String type;
+	private String name;
+	private String number;
+
 	
 	private String address;
+
 	private String city;
 	private String state;
 	private String zipCode;
 	
 	public Address() {
+	
 	}
 	
 	/**
@@ -19,37 +27,99 @@ public class Address {
 	 * @param state
 	 * @param zipCode
 	 */
-	public Address(String address, String city, String state, String zipCode) {
-		this.address = address;
+	public Address(String type,String name,String number, String city, String state, String zipCode) {
+		this.type= type;
+		this.name = name;
+		this.number= number;
 		this.city = city;
 		this.state = state;
 		this.zipCode = zipCode;
 	}
 	
+	
 	/**
-	 * @return the address
+	 *  @return the type
 	 */
-	public String getAddress() {
-		return address;
+	public String getType(){
+		return type;
 	}
+	
 	/**
-	 * @param address the address to set
+	 * @param type the type to set
 	 */
-	public void setAddress(String address) {
+	public void setType(String type){
+		//Check the length of the type
+				if(type.length()<=3 || type.length()>=7) {
+					throw new IllegalArgumentException("The type must be >3 and <15");
+				}
+				
+				//Check if the type contains only characters
+				Pattern p1 = Pattern.compile("^[a-zA-Z]+$");
+				Matcher m1 = p1.matcher(type);
+				if (!m1.find()) {
+					throw new IllegalArgumentException("The type must be in a correct format");
+				}		
+				
+				this.type = type;
+	}
+	
+	/**
+	 * @return the name
+	 */
+	public String getName() {
+		return name;
+	}
+	
+	/**
+	 * @param name the name to set
+	 */
+	public void setName(String name) {
 		
 		//Check the address' lenght
-		if(address.length()>=100) {
-			throw new IllegalArgumentException("The address must be >7 and <15");
+		if(name.length()<=3 || name.length()>=100) {
+			throw new IllegalArgumentException("The name must be >7 and <15");
 		}
 		
-		this.address = address;
+		//Check if the name contains only characters
+		Pattern p1 = Pattern.compile("^[a-zA-Z]+$");
+		Matcher m1 = p1.matcher(name);
+		if (!m1.find()) {
+			throw new IllegalArgumentException("The name must be in a correct format");
+		}	
+		
+		this.name = name;
 	}
+	
+	/**
+	 * @return the number
+	 */
+	public String getNumber(){
+		return number;
+	}
+	
+	/**
+	 * @param number the number to set
+	 */
+	public void setNumber(String number){
+		
+		//Check if the number contains only characters
+		Pattern p1 = Pattern.compile("^[0-9]+$");
+		Matcher m1 = p1.matcher(number);
+		if (!m1.find()) {
+			throw new IllegalArgumentException("The number must be in a correct format");
+		}	
+		
+		this.number = number;
+		
+	}
+	
 	/**
 	 * @return the city
 	 */
 	public String getCity() {
 		return city;
 	}
+	
 	/**
 	 * @param city the city to set
 	 */
@@ -106,7 +176,7 @@ public class Address {
 	public void setZipCode(String zipCode) {
 		
 		//Check the zipcode length
-		if(zipCode.length()>8) {
+		if(zipCode.length()<3 || zipCode.length()>8) {
 			throw new IllegalArgumentException("The zipcode must be <=8");
 		}
 		

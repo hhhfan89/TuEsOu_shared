@@ -6,6 +6,7 @@ import java.util.List;
 
 public class Track{
 	
+	private int id;
 	private String name;
 	private Date date;
 	private Time startTime;
@@ -21,6 +22,14 @@ public class Track{
 		this.startTime = startTime;
 		this.finishTime = finishTime;
 		this.coordinate = coordinate;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getName() {

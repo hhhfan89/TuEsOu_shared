@@ -2,6 +2,7 @@ package it.vitux.tuesou.entity;
 
 public class Coordinate{
 	
+	private int id;
 	private double latitude;
 	private double longitude;
 	
@@ -14,6 +15,14 @@ public class Coordinate{
 		this.longitude = longitude;
 	}
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	public double getLatitude() {
 		return latitude;
 	}

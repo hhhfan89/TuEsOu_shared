@@ -1,28 +1,27 @@
-/*package it.vitux.tuesou.test;
+package it.vitux.tuesou.test;
 
 import static org.junit.Assert.*;
-import it.vitux.tuesou.User;
+import it.vitux.tuesou.entity.User;
 
 import org.junit.Before;
 import org.junit.Test;
 
 public class UserTest {
-
+	//
 	@Before
 	public void setUp() throws Exception {
 		//User user = new User();
-	}*/
-
-
+	}
 	
-	/*	questo era gia commentato, il resto no!
+/*
 	@Test
 	public void testSetId() {
 		fail("Not yet implemented"); // TODO
 	}*/
 
-
-/*
+	
+	/*Test if the control accepts only username in the correct format*/
+	
 	@Test  (expected=IllegalArgumentException.class)
 	public void testSetUsername() {
 		User user = new User();
@@ -30,6 +29,8 @@ public class UserTest {
 		//assertEquals("Silvia", user.getUsername());
 	}
 
+	/*Test if the control accepts only name in the correct format*/
+	
 	@Test  (expected=IllegalArgumentException.class)
 	public void testSetName() {
 		User user = new User();
@@ -37,7 +38,8 @@ public class UserTest {
 		//assertEquals("silvia", user.getName());
 	}
 	
-
+	
+	/*Test if the control accepts only surname in the correct format*/
 	@Test
 	public void testSetSurname() {
 		User user = new User();
@@ -45,22 +47,30 @@ public class UserTest {
 		//assertEquals("Naro", user.getSurname());
 	}
 
+	/*Test if the control accepts only password in the correct format*/
 	@Test
 	public void testSetPassword() {
 		User user = new User();
-		user.setPassword("");
-		assertEquals("", user.getPassword());
-	}*/
-
-	/* questo era gia commentato, il resto no!
-	@Test
-	public void testSetEmail() {
-		fail("Not yet implemented"); // TODO
+		user.setPassword("TuEsOuPassword");
+		assertEquals("TuEsOuPassword", user.getPassword());
 	}
 
-	@Test
-	public void testSetTelephone() {
-		fail("Not yet implemented"); // TODO
-	}*/
+	/*Test if the control accepts only email in the correct format*/
+	@Test  // (expected = IllegalArgumentException.class)
+	public void testSetEmail() {
+		User user = new User();
+		user.setEmail("naro.silvia@libero.it");
+		assertEquals("naro.silvia@libero.it", user.getEmail());
+	}
 
-//}
+	/*Test if the control accepts only telephone in the correct format*/
+	@Test (expected = IllegalArgumentException.class)
+	public void testSetTelephone() {
+		User user = new User();
+		user.setTelephone("");
+		//user.setTelephone("3393937210");
+		//assertEquals("3393937210", user.getTelephone());
+		}
+
+}
+
