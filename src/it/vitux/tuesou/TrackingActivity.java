@@ -55,10 +55,8 @@ public class TrackingActivity extends SherlockFragmentActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.layout_tracking);
-		
-		
-		
-		btnShowLocation = (Button) findViewById(R.id.showMapButton);
+	
+		//btnShowLocation = (Button) findViewById(R.id.showMapButton);
 		
 		fManager = getSupportFragmentManager();
 		mapFragment = new MapPageFragment(fManager);
